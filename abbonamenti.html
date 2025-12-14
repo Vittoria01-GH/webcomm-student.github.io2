@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Abbonamenti Studenti - Lavazza</title>
+    <meta name="description" content="Abbonamenti esclusivi per studenti Lavazza. Scegli il piano più adatto a te.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stile principale (ereditato) -->
+    <link type="text/css" rel="stylesheet" href="clientlib-site.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="page basicpage lvz-light-mode">
+
+<!-- Header -->
+<header class="lvz-header">
+    <div class="container">
+        <nav class="lvz-nav navbar navbar-expand-lg">
+            <div class="lvz-logo">
+                <a href="index.html" aria-label="Lavazza">
+                    <h1 class="icon-logo">Lavazza</h1>
+                </a>
+            </div>
+            <ul class="lvz-nav__main">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="studenti.html">Offerte Studenti</a></li>
+                <li><a href="abbonamenti.html" class="active">Abbonamenti</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="abbonamenti-hero">
+    <div class="container">
+        <div class="icon-wrapper">
+            <div class="icon-bg"></div>
+            <i class="icon-main fas fa-calendar-check"></i>
+        </div>
+        <h1>Abbonamenti per Studenti</h1>
+        <p>Scegli il piano che fa per te. Modifica, sospendi o cancella quando vuoi. Spedizione sempre gratuita.</p>
+    </div>
+</section>
+
+<!-- Passi per Abbonarsi -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Abbonati in 3 semplici passi</h2>
+        <div class="step-indicator">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div>Registrazione</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>Scegli il piano</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>Ricevi a casa</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Piani di Abbonamento -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Scegli il tuo Piano</h2>
+        <div class="row">
+            <!-- Piano Base -->
+            <div class="col-md-4">
+                <div class="piano-card">
+                    <div class="piano-header">
+                        <i class="piano-icon fas fa-mug-hot"></i>
+                        <h3>Base</h3>
+                        <div class="piano-price">€ 9,90<span>/mese</span></div>
+                        <p>40 capsule al mese</p>
+                    </div>
+                    <ul class="piano-features">
+                        <li><i class="fas fa-check"></i> 40 capsule/mese</li>
+                        <li><i class="fas fa-check"></i> Mix classico</li>
+                        <li><i class="fas fa-check"></i> Consegna gratuita</li>
+                        <li><i class="fas fa-check"></i> Sospensione 1 volta/anno</li>
+                    </ul>
+                    <a href="#" class="lvz-button lvz-button--outline lvz-button--block" onclick="showCartPopup('Abbonamento Base', '€ 9,90/mese'); return false;">Scegli Base</a>
+                </div>
+            </div>
+            
+            <!-- Piano Studente (Più Popolare) -->
+            <div class="col-md-4">
+                <div class="piano-card featured">
+                    <div class="piano-badge">PIÙ POPOLARE</div>
+                    <div class="piano-header">
+                        <i class="piano-icon fas fa-user-graduate"></i>
+                        <h3>Studente</h3>
+                        <div class="piano-price">€ 12,90<span>/mese</span></div>
+                        <p>50 capsule al mese</p>
+                    </div>
+                    <ul class="piano-features">
+                        <li><i class="fas fa-check"></i> 50 capsule/mese</li>
+                        <li><i class="fas fa-check"></i> Mix personalizzabile</li>
+                        <li><i class="fas fa-check"></i> Consegna gratuita</li>
+                        <li><i class="fas fa-check"></i> Sospendi quando vuoi</li>
+                        <li><i class="fas fa-check"></i> 1 box regalo/anno</li>
+                        <li><i class="fas fa-check"></i> Assistenza prioritaria</li>
+                    </ul>
+                    <a href="#" class="lvz-button lvz-button--block" onclick="showCartPopup('Abbonamento Studente', '€ 12,90/mese'); return false;">Scegli Studente</a>
+                </div>
+            </div>
+            
+            <!-- Piano Premium -->
+            <div class="col-md-4">
+                <div class="piano-card">
+                    <div class="piano-header">
+                        <i class="piano-icon fas fa-crown"></i>
+                        <h3>Premium</h3>
+                        <div class="piano-price">€ 19,90<span>/mese</span></div>
+                        <p>100 capsule al mese</p>
+                    </div>
+                    <ul class="piano-features">
+                        <li><i class="fas fa-check"></i> 100 capsule/mese</li>
+                        <li><i class="fas fa-check"></i> Mix completo</li>
+                        <li><i class="fas fa-check"></i> Consegna gratuita</li>
+                        <li><i class="fas fa-check"></i> Modifica in tempo reale</li>
+                        <li><i class="fas fa-check"></i> 2 box regalo/anno</li>
+                        <li><i class="fas fa-check"></i> Accesso anteprime</li>
+                    </ul>
+                    <a href="#" class="lvz-button lvz-button--outline lvz-button--block" onclick="showCartPopup('Abbonamento Premium', '€ 19,90/mese'); return false;">Scegli Premium</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popup del Carrello - VERSIONE SEMPLIFICATA -->
+<div id="cart-popup" class="cart-popup">
+    <div class="cart-popup-content">
+        <button class="cart-popup-close" onclick="closeCartPopup()">&times;</button>
+        <div class="cart-popup-header">
+            <h3><i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i> Abbonamento aggiunto al carrello</h3>
+        </div>
+        <div class="cart-popup-body">
+            <div class="cart-item-preview">
+                <div class="cart-item-image">
+                    <i class="fas fa-calendar-check" style="font-size: 40px; color: #a52a2a;"></i>
+                </div>
+                <div class="cart-item-details">
+                    <h4 id="cart-item-name">Abbonamento Studente</h4>
+                    <p id="cart-item-price">€ 12,90/mese</p>
+                    <p class="cart-item-info"><small>Consegna mensile gratuita</small></p>
+                    <p class="cart-item-info"><small>50 capsule al mese</small></p>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <h5>Dettagli Abbonamento</h5>
+                <div class="cart-summary-row">
+                    <span>Piano:</span>
+                    <span>Mensile</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Primo pagamento:</span>
+                    <span id="cart-price-display">€ 12,90</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Rinnovi:</span>
+                    <span>Ogni mese</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Spedizione:</span>
+                    <span style="color: #28a745;">GRATUITA</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span><strong>Totale primo mese:</strong></span>
+                    <span><strong id="cart-total-display">€ 12,90</strong></span>
+                </div>
+            </div>
+            
+            <div class="cart-popup-actions">
+                <button class="btn-continue" onclick="closeCartPopup()">Scegli altro piano</button>
+                <a href="#" class="btn-checkout">Completa l'iscrizione</a>
+            </div>
+            
+            <div class="cart-popup-footer">
+                <p><small><i class="fas fa-info-circle" style="color: #666; margin-right: 5px;"></i> Puoi modificare o cancellare l'abbonamento in qualsiasi momento</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabella Comparativa TR table row TD table data --> 
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Confronta i Piani</h2>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Caratteristiche</th>
+                        <th>Base</th>
+                        <th>Studente</th>
+                        <th>Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Capsule al mese</td>
+                        <td>40</td>
+                        <td>50</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Prezzo per capsula</td>
+                        <td>€ 0,25</td>
+                        <td>€ 0,26</td>
+                        <td>€ 0,20</td>
+                    </tr>
+                    <tr>
+                        <td>Scelta capsule</td>
+                        <td>Limitata</td>
+                        <td>Completa</td>
+                        <td>Completa + speciali</td>
+                    </tr>
+                    <tr>
+                        <td>Consegna gratuita</td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                        <td><i class="fas fa-check text-success"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Modifica piano</td>
+                        <td>Mensile</td>
+                        <td>Settimanale</td>
+                        <td>In tempo reale</td>
+                    </tr>
+                    <tr>
+                        <td>Sospensione</td>
+                        <td>1 volta/anno</td>
+                        <td>Illimitata</td>
+                        <td>Illimitata</td>
+                    </tr>
+                    <tr>
+                        <td>Box regalo</td>
+                        <td>-</td>
+                        <td>1 all'anno</td>
+                        <td>2 all'anno</td>
+                    </tr>
+                    <tr>
+                        <td>Assistenza</td>
+                        <td>Standard</td>
+                        <td>Prioritaria</td>
+                        <td>Dedicata 24/7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Domande Frequenti</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Come posso modificare il mio abbonamento?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Puoi modificare il tuo abbonamento in qualsiasi momento accedendo al tuo account personale. Le modifiche avranno effetto dal ciclo di consegna successivo.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Posso sospendere l'abbonamento durante le vacanze?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Sì! Puoi sospendere l'abbonamento fino a 3 mesi consecutivi senza costi aggiuntivi. Basta accedere al tuo account e selezionare "Sospendi consegne".
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Come funziona la consegna?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Le consegne avvengono ogni 30 giorni dalla data di attivazione. Riceverai una notifica 3 giorni prima della spedizione. Puoi modificare la data di consegna fino a 24 ore prima.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Finale -->
+<section class="bg-dark text-white py-5 text-center">
+    <div class="container">
+        <h2>Pronto a iniziare?</h2>
+        <p class="lead">Iscriviti ora e ricevi subito il 25% di sconto sul primo mese!</p>
+        <a href="#" class="lvz-button lvz-button--invert lvz-button--large mt-3" onclick="showCartPopup('Abbonamento Studente', '€ 12,90/mese'); return false;">Inizia l'Abbonamento</a>
+        <p class="mt-3 small">Puoi cancellare in qualsiasi momento senza penali</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="footer aem-GridColumn aem-GridColumn--default--12">
+
+    
+        <footer class="lvz-footer">
+            <section class="lvz-footer__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-wrap flex-md-row">
+                            <div class="lvz-footer__container__logo col-12 col-md-12 col-lg-12 col-xl-2">
+                                <span class="icon-logo-torino"></span>
+                            </div>
+                            <!--  First Column STARTS -->
+                            
+	
+	
+		<div class="lvz-footer__container__utils col-12 col-md-12 col-lg-2 col-xl-2">
+			<div class="lvz-footer__container__utils__container__collapse">
+				<div class="lvz-footer__container__utils__title collapsed" aria-expanded="false" tabindex="0" role="button" data-toggle="collapse" data-collapse-id="Prodotti" aria-controls="panel-Prodotti"><span>Prodotti</span>
+				</div>
+				<div class="lvz-footer__container__utils__collapse" data-collapse="Prodotti" id="panel-Prodotti">
+					
+						<div class="lvz-footer__container__utils__item ">
+							<a data-analytics="link_click=footer|Prodotti:Caffè" href="https://www.lavazza.it/it/caffe" target="_self">Caffè</a>
+						</div>
+						<div class="lvz-footer__container__utils__item__details">
+							<ul>
+								<li><a data-analytics="link_click=footer|Prodotti:Tab" href="https://www.lavazza.it/it/tab-caffe-tabli" target="_self">Tab</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Grani" href="https://www.lavazza.it/it/caffe-in-grani" target="_self">Grani</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Macinato" href="https://www.lavazza.it/it/caffe-tostato-macinato" target="_self">Macinato</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Capsule A Modo Mio" href="https://www.lavazza.it/it/capsule/a-modo-mio" target="_self">Capsule A Modo Mio</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Capsule Lavazza compatibili con macchine Nespresso* Original" href="https://www.lavazza.it/it/capsule/compatibili-nespresso" target="_self">Capsule Lavazza compatibili con macchine Nespresso* Original</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Capsule Espresso Point" href="https://www.lavazza.it/it/capsule/espresso-point" target="_self">Capsule Espresso Point</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Cialde" href="https://www.lavazza.it/it/cialde" target="_self">Cialde</a></li>
+							
+								<li><a data-analytics="link_click=footer|Prodotti:Solubile" href="https://www.lavazza.it/it/caffe-solubile" target="_self">Solubile</a></li>
+							</ul>
+						</div>
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Prodotti:Macchine" href="https://www.lavazza.it/it/macchine-da-caffe-e-caffettiere" target="_self">Macchine</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Prodotti:Non solo caffè" href="https://www.lavazza.it/it/non-solo-caffe" target="_self">Non solo caffè</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Prodotti:Accessori" href="https://www.lavazza.it/it/accessori" target="_self">Accessori</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Prodotti:Ricambi" href="https://www.lavazza.it/it/ricambi" target="_self">Ricambi</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Prodotti:NIMS: in Black" href="https://www.lavazza.it/it/nims-collection" target="_self">NIMS: in Black</a>
+						</div>
+						<div class="lvz-footer__container__utils__item__details">
+							<ul>
+								<li><a data-analytics="link_click=footer|Prodotti:*Lavazza non è affiliata a, né promossa o sponsorizzata da Nespresso." target="_self">*Lavazza non è affiliata a, né promossa o sponsorizzata da Nespresso.</a></li>
+							</ul>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	
+
+
+                            
+                            <!--  First Column ENDS -->
+
+                            <!--  Second Column STARTS -->
+                            
+                                
+	
+	
+	      <div class="lvz-footer__container__utils col-12 col-md-12 col-lg-2 col-xl-2">
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:ABBONAMENTI" href="https://www.lavazza.it/it/abbonamento-caffe" target="_self">ABBONAMENTI</a>
+                </div>
+              </div>
+             
+             
+            
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:PROMOZIONI" href="https://www.lavazza.it/it/promozioni" target="_self">PROMOZIONI</a>
+                </div>
+              </div>
+             
+             
+            
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:LAVAZZA STORIES" href="https://www.lavazza.it/it/i-segreti-del-caffe" target="_self">LAVAZZA STORIES</a>
+                </div>
+              </div>
+             
+             
+            
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:SOSTENIBILITÀ" href="https://www.lavazza.it/it/blend-for-better" target="_self">SOSTENIBILITÀ</a>
+                </div>
+              </div>
+             
+             
+            
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:LAVAZZA WORLD" href="https://www.lavazza.it/it/mondo-lavazza" target="_self">LAVAZZA WORLD</a>
+                </div>
+              </div>
+             
+             
+            
+           
+            
+              <div class="lvz-footer__container__utils__container__collapse">
+                <div class="lvz-footer__container__utils__title">
+                 <a data-analytics="link_click=footer|:REGISTRAZIONE MACCHINE" href="https://www.lavazza.it/it/registrazione-macchina" target="_self">REGISTRAZIONE MACCHINE</a>
+                </div>
+              </div>
+             
+             
+            </div>
+	
+	
+	
+	
+		
+	
+
+                            
+
+                            
+
+                            <!--  Second Column ENDS -->
+
+                            <!--  Third Column STARTS -->
+
+                            <div class="lvz-footer__container__utils col-12 col-md-12 col-lg-2 col-xl-2">
+                                <div class="lvz-footer__container__utils__container__collapse">
+                                    <div class="lvz-footer__container__utils__title collapsed" aria-expanded="false" tabindex="0" role="button" data-toggle="collapse" data-collapse-id="Aiuto_e_Contatti" aria-controls="panel-Aiuto_e_Contatti">
+                                        <span>
+                                            Aiuto e Contatti
+                                        </span>
+                                    </div>
+                                    <div class="lvz-footer__container__utils__collapse" data-collapse="Aiuto_e_Contatti" id="panel-Aiuto_e_Contatti">
+                                        <div class="lvz-footer__container__utils__item">
+                                            <a class="lvz-faq-link" data-analytics="link_click=footer|Aiuto e Contatti:FAQs" href="https://www.lavazza.it/it/FAQ" target="_self">FAQs</a>
+                                        </div>
+                                        <div class="lvz-footer__container__utils__item --margin-top-16">
+                                            <a data-analytics="link_click=footer|Contatti:Contatti" href="https://www.lavazza.it/it/contattaci" target="_self">Contatti</a>
+                                        </div>
+                                        <div class="lvz-footer__container__utils__item --margin-top-16">
+                                            <div class="--desktop">
+                                                <span class="icon-phone"></span>
+                                                <a data-analytics="link_click=footer|Aiuto e Contatti:800 124 535" target="_self" href="https://www.lavazza.it/it/contattaci" style="pointer-events: none">800 124 535</a>
+                                            </div>
+                                            <div class="--mobile">
+                                                <span class="icon-phone"></span>
+                                                <a data-analytics="link_click=footer|Aiuto e Contatti:800 124 535" target="_self" data-tel-number="tel:800 124 535" href="javascript:void(0)">800 124 535</a>
+                                            </div>
+                                        </div>
+                                        <div class="lvz-footer__container__utils__item --margin-top-16">
+                                            <a data-analytics="link_click=footer|Aiuto e Contatti:Lavora con noi" href="https://jobs.lavazza.com/?locale=it_IT" target="_blank">Lavora con noi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  Third Column ENDS -->
+
+                            <!--  Fourth Column STARTS -->
+                            
+	
+	
+		<div class="lvz-footer__container__utils col-12 col-md-12 col-lg-2 col-xl-2">
+			<div class="lvz-footer__container__utils__container__collapse">
+				<div class="lvz-footer__container__utils__title collapsed" aria-expanded="false" tabindex="0" role="button" data-toggle="collapse" data-collapse-id="Note_Legali_e_Privacy" aria-controls="panel-Note_Legali_e_Privacy"><span>Note Legali e Privacy</span>
+				</div>
+				<div class="lvz-footer__container__utils__collapse" data-collapse="Note_Legali_e_Privacy" id="panel-Note_Legali_e_Privacy">
+					
+						<div class="lvz-footer__container__utils__item ">
+							<a data-analytics="link_click=footer|Note Legali e Privacy:Termini di utilizzo" href="https://www.lavazza.it/it/termini-e-condizioni" target="_blank">Termini di utilizzo</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Note Legali e Privacy:Condizioni di vendita e-commerce" href="https://www.lavazza.it/it/condizioni-di-vendita" target="_blank">Condizioni di vendita e-commerce</a>
+						</div>
+						
+					
+						<div class="lvz-footer__container__utils__item --margin-top-16">
+							<a data-analytics="link_click=footer|Note Legali e Privacy:Termini e condizioni Lavazza da te" href="https://www.lavazza.it/it/termini-e-condizioni-abbonamento-caffe" target="_blank">Termini e condizioni Lavazza da te</a>
+						</div>
+						
+					
+				</div>
+			</div>
+		</div>
+	
+
+                            <!--  Fourth Column ENDS -->
+
+
+
+
+                            <div class="lvz-footer__container__utils col-12 col-md-6 col-lg-2 col-xl-2">
+                                <!--  Social Icon STARTS -->
+                                <div class="lvz-footer__container__utils__social flex-wrap">
+                                    <a href="https://www.facebook.com/lavazzaitalia/" target="_blank">
+                                        <img loading="lazy" src="Fb.svg" alt="Facebook">
+                                        
+                                    </a>
+
+                                
+                                    <a href="https://www.instagram.com/lavazzait/" target="_blank">
+                                        <img loading="lazy" src="Insta.svg" alt="Instagram">
+                                        
+                                    </a>
+
+                                
+                                    <a href="https://www.youtube.com/user/lavazza" target="_blank">
+                                        <img loading="lazy" src="YT.svg" alt="YouTube">
+                                        
+                                    </a>
+
+                                </div>
+                                <!--  Social Icon ENDS -->
+
+                                <!--  Choose Country STARTS -->
+                                
+  
+	   
+	   
+	   
+	   
+	   
+	   <div class="lvz-footer__container__utils__choose__country">
+                <div class="lvz-footer__container__utils__choose__country__title"><span>SCEGLI IL TUO PAESE</span></div>
+				 <div class="lvz-footer__container__utils__choose__country__selected" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="country-listbox-id">
+					 ITALIA
+				 </div>
+		   		<div class="lvz-footer__container__utils__choose__country__dropDown" id="country-listbox-id" role="listbox">
+					
+						<div class="__option"><a data-analytics="link_click=footer|SCEGLI IL TUO PAESE:ITALIA" href="" target="_self">ITALIA</a></div>
+					
+                
+					
+						<div class="__option"><a data-analytics="link_click=footer|SCEGLI IL TUO PAESE:ALTRE NAZIONI" href="https://www.lavazza.com/en/all-countries" target="_self">ALTRE NAZIONI</a></div>
+					
+                </div>
+       </div>
+  
+
+                                <!--  Choose Country ENDS -->
+
+                                <!--  Payment Icon STARTS -->
+                                <div class="lvz-footer__container__utils__payments__icons">
+                <span class="icon-payment">
+                  <img loading="lazy" src="visa.svg" alt="Visa">
+                </span>
+                                
+                <span class="icon-payment">
+                  <img loading="lazy" src="mastercard.svg" alt="Mastercard">
+                </span>
+                                
+                <span class="icon-payment">
+                  <img loading="lazy" src="maestro.svg" alt="Maestro">
+                </span>
+                                
+                <span class="icon-payment">
+                  <img loading="lazy" src="amex.svg" alt="American Express">
+                </span>
+                                
+                <span class="icon-payment">
+                  <img loading="lazy" src="paypal.svg" alt="Paypal">
+                </span>
+                                </div>
+                                <!--  Payment Icon ENDS -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--  Policy Section STARTS -->
+                    <div class="row">
+                        <div class="col d-flex flex-wrap flex-md-row">
+                            <ul class="lvz-footer__link">
+                                
+                                <li><a data-analytics="link_click=footer|policy:Privacy Policy" href="https://www.lavazza.it/it/privacy-policy" target="_self">Privacy Policy</a></li>
+                            
+                                
+                                <li><a data-analytics="link_click=footer|policy:Cookie Policy" href="https://www.lavazza.it/it/cookie-policy" target="_blank">Cookie Policy</a></li>
+                            
+                                
+                                <li><a data-analytics="link_click=footer|policy:Impostazioni Cookie" id="tealium_cookies" href="#" target="_self">Impostazioni Cookie</a></li>
+                            
+                                
+                                <li><a data-analytics="link_click=footer|policy:Whistleblowing" href="https://www.lavazzagroup.com/it/chi-siamo/compliance.html#anchor_copy_copy_cop_1905743243" target="_blank">Whistleblowing</a></li>
+                            
+                                
+                                <li><a data-analytics="link_click=footer|policy:Dichiarazione di accessibilità" href="https://www.lavazza.it/it/dichiarazione-di-accessibilita" target="_self">Dichiarazione di accessibilità</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Policy Section ENDS -->
+
+                    <!--  Legal Section STARTS -->
+                    <div class="row">
+                        <div class="col d-flex flex-wrap flex-md-row">
+                            <div class="lvz-footer__vat"><span>© 2025 LUIGI LAVAZZA SPA, tutti i diritti riservati - P.IVA 00470550013 REA n. 257143, capitale sociale €25.090.000 i.v.</span></div>
+                        </div>
+                    </div>
+                    <!--  Legal Section STARTS -->
+                </div>
+            </section>
+        </footer>
+    
+</div>
+</div>
+
+<script>
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            answer.style.display = 'block';
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+    }
+    
+    // Apri la prima FAQ
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstFAQ = document.querySelector('.faq-question');
+        if (firstFAQ) {
+            toggleFAQ(firstFAQ);
+        }
+    });
+
+    // Funzione per mostrare il popup del carrello - VERSIONE SEMPLIFICATA
+    function showCartPopup(productName, productPrice) {
+        // Prevenire il comportamento predefinito del link
+        event.preventDefault();
+        
+        // Aggiorna i dettagli del prodotto nel popup
+        const cartItemName = document.getElementById('cart-item-name');
+        const cartItemPrice = document.getElementById('cart-item-price');
+        const cartPriceDisplay = document.getElementById('cart-price-display');
+        const cartTotalDisplay = document.getElementById('cart-total-display');
+        
+        if (cartItemName) cartItemName.textContent = productName;
+        if (cartItemPrice) cartItemPrice.textContent = productPrice;
+        if (cartPriceDisplay) cartPriceDisplay.textContent = productPrice;
+        if (cartTotalDisplay) cartTotalDisplay.textContent = productPrice;
+        
+        // Aggiorna il titolo del popup
+        const popupHeader = document.querySelector('.cart-popup-header h3');
+        if (popupHeader) {
+            popupHeader.innerHTML = '<i class="fas fa-check-circle" style="color: #28a745; margin-right: 10px;"></i> Abbonamento aggiunto al carrello';
+        }
+        
+        // Aggiorna il titolo del riepilogo
+        const summaryTitle = document.querySelector('.cart-summary h5');
+        if (summaryTitle) {
+            summaryTitle.textContent = 'Dettagli Abbonamento';
+        }
+        
+        // Aggiorna il testo dei bottoni
+        const btnContinue = document.querySelector('.btn-continue');
+        const btnCheckout = document.querySelector('.btn-checkout');
+        if (btnContinue) btnContinue.textContent = 'Scegli altro piano';
+        if (btnCheckout) btnCheckout.textContent = 'Completa l\'iscrizione';
+        
+        // Mostra il messaggio di modifica/cancellazione
+        const cartPopupFooter = document.querySelector('.cart-popup-footer');
+        if (cartPopupFooter) {
+            cartPopupFooter.style.display = 'block';
+        }
+        
+        // Mostra il popup
+        const cartPopup = document.getElementById('cart-popup');
+        if (cartPopup) {
+            cartPopup.classList.add('show');
+            
+            // Nascondi automaticamente dopo 5 secondi
+            setTimeout(function() {
+                closeCartPopup();
+            }, 5000);
+        }
+    }
+
+    // Funzione per chiudere il popup
+    function closeCartPopup() {
+        const cartPopup = document.getElementById('cart-popup');
+        if (cartPopup) {
+            cartPopup.classList.remove('show');
+        }
+    }
+
+    // Chiudi il popup cliccando fuori dall'area
+    document.addEventListener('click', function(event) {
+        const cartPopup = document.getElementById('cart-popup');
+        if (cartPopup && cartPopup.classList.contains('show')) {
+            // Se il click è fuori dal popup e non su un pulsante
+            if (!cartPopup.contains(event.target) && 
+                !event.target.classList.contains('lvz-button') && 
+                !event.target.closest('.lvz-button')) {
+                closeCartPopup();
+            }
+        }
+    });
+
+    // Chiudi il popup con il tasto ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeCartPopup();
+        }
+    });
+</script>
+
+</script>
+
+</body>
+</html>
